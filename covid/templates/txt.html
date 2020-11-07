@@ -1,0 +1,128 @@
+
+{% extends 'basic.html' %}
+
+{% block title %}
+textile
+{% endblock title %}
+
+{% block body %}
+<style>
+    body{
+        
+        
+        background-color: #f0ecfc;
+background-image: linear-gradient(315deg, #f0ecfc 0%, #c797eb 74%);
+    }
+</style>
+<h2  class ="text-center" style="color:black;">TEXTILE JOBS </h2>
+
+<div class="container mt-3 ">
+  <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page"> Welcome {{request.user}} &nbsp; &nbsp; </li>
+
+    <div class="btn-groupIml-3">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria_haspopup="true" aria-expanded="true"> Add Post </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="/">Home</a>
+      <a class="dropdown-item" href="/add">Add</a>
+
+    </div>
+
+
+
+
+
+    </div>
+    
+  </ol>
+</nav>
+</div>
+
+
+{% for post in posts reversed %}
+{% load static %}
+
+<div class="container mt-3">
+  <div class="card" style="width: 25rem;">
+    
+    <div class="card-title">
+      <h6 class="text-center">Title : {{post.title}}</h6>
+    </div>
+    <div class="card-body">
+      <p class="card-text">{{post.content}}</p>
+      <hr>
+      <p>
+      
+    </div>
+  </div>
+
+
+</div>
+{% endfor %}
+
+
+     
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Textile Engineer req in CANADA - AUSTRALIA
+            </h5>
+        <p class="card-text">
+            Pear Visa Immigration Services Private Limited
+            New Delhi, Delhi
+            via Monster India.
+            <br>
+        salary : 3L-4L for annum ,fulltime</p>
+        <a href="/txtd" class="btn btn-primary">view details</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">SR.MARKETING EXECUTIVE (TEXTILE)
+            PADMALAYA TEXTILE OF INDIA
+            </h5>
+        <p class="card-text">Bhubaneswar, Odisha 
+        <br>
+    salary : 2L-3L</p>
+        <a href="/d" class="btn btn-primary">view details</a>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Jobs for sales officer-Reputed textile Industry
+             </h5>
+        <p class="card-text">Seven Consultancy (HR Solution)
+            Kolhapur, Maharashtra
+        <br>
+    Salary : 4L-5L</p>
+        <a href="/s" class="btn btn-primary">View details</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">fashion designer/Textile Designer/sketch Specialist/Garment Designer
+            Fly Care India
+            </h5>
+        <p class="card-text">Amritsar, Punjab
+            <br>
+            Salary : 5L-6L
+        </p>
+        <a href="/f" class="btn btn-primary">View details</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

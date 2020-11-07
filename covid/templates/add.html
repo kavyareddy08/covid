@@ -1,0 +1,31 @@
+{% extends 'basic.html' %}
+{% block title %}
+ addpost
+{% endblock title %}
+{% block body %}
+<div class="container">
+    <h5 style="color: #29539b;">Add Job Details </h5>
+    
+        <form action="/addpost" method="post" enctype="multipart/form-data">{% csrf_token %}
+            <div class="form-group">
+                <label for="title"> Job Title</label>
+                <input type="text" class="form-control" id="title" name="title" placeholder="Give a valid title name" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="desc">Content</label>
+                <textarea type="text" class="form-control" id="desc" name="desc" placeholder="Add content" required></textarea>
+            </div>
+    
+            <div class="form-group">
+                <label for="name">Salary</label>
+                <input type="text" class="form-control" id="name" name="name"  required>
+            </div>
+    
+            
+    
+            <button type="submit" class="btn btn-success mt-3">Save</button>
+        
+    </form>
+</div>
+{% endblock body%}
