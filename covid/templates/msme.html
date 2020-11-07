@@ -1,0 +1,119 @@
+
+{% extends 'basic.html' %}
+
+{% block title %}
+textile
+{% endblock title %}
+
+{% block body %}
+<style>
+    body{
+        
+        
+        background-color: #f0ecfc;
+background-image: linear-gradient(315deg, #f0ecfc 0%, #c797eb 74%);
+    }
+</style>
+<h2  class ="text-center" style="color:black;">MSME JOBS </h2>
+
+<div class="container mt-3 ">
+  <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page"> Welcome {{request.user}} &nbsp; &nbsp; </li>
+
+    <div class="btn-groupIml-3">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria_haspopup="true" aria-expanded="true"> Add  </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="/">Home</a>
+      <a class="dropdown-item" href="/add">Add</a>
+
+    </div>
+
+
+
+
+
+    </div>
+    
+  </ol>
+</nav>
+</div>
+
+
+{% for post in posts reversed %}
+{% load static %}
+
+<div class="container mt-3">
+  <div class="card" style="width: 25rem;">
+    
+    <div class="card-title">
+      <h6 class="text-center">Title : {{post.title}}</h6>
+    </div>
+    <div class="card-body">
+      <p class="card-text">{{post.content}}</p>
+      <hr>
+      <p>
+      
+    </div>
+  </div>
+
+
+</div>
+{% endfor %}
+
+
+     
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Senior Backend Engineer Job 
+
+a
+            </h5>
+        <p class="card-text">
+            Bengaluru, Karnataka
+            <br>
+        salary : 6L-3M for per </p>
+        <a href="/a" class="btn btn-primary">view details</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Creative Lead
+
+
+            </h5>
+        <p class="card-text">Hyderabad,telegana
+        <br>
+    salary : 3.9L-5M per year</p>
+        <a href="/b" class="btn btn-primary">view details</a>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">SALES MANAGER – MSME LOANS
+
+
+             </h5>
+        <p class="card-text">Ahmednagar, Maharashtra
+        <br>
+    Salary : 5L-7Lper year</p>
+        <a href="/c" class="btn btn-primary">View details</a>
+      </div>
+    </div>
+  </div>
+  
+    </div>
+  </div>
+</div>
+{% endblock %}

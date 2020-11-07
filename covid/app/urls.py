@@ -20,5 +20,11 @@ urlpatterns = [
     path('d',views.d,name='d'),
     path('s',views.s,name='s'),
     path('f',views.f,name='f'),
+    path('a',views.a,name='a'),
+    path('b',views.b,name='b'),
+    path('c',views.c,name='c'),
+    path('p',views.p,name='p'),
+    path('q',views.q,name='q'),
+    path('r',views.r,name='r'),
     
 ]

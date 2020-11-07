@@ -163,3 +163,22 @@ def s(request):
 
 def f(request):
     return render(request,'f.html')
+
+def a(request):
+    return render(request,'a.html')
+
+def b(request):
+    return render(request,'b.html')
+
+def c(request):
+    return render(request,'c.html')
+
+def p(request):
+    return render(request,'p.html')
+
+def q(request):
+    return render(request,'q.html')
+
+def r(request):
+    return render(request,'r.html')
+    
